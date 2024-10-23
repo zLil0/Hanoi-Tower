@@ -57,6 +57,7 @@ const put = (towerId) => {
     setTimeout(() => align(towerId), 10)
     moveCount++
     moves.innerHTML = moveCount
+    winDetection()
   }
   else{
     setTimeout(() => align(prevTowerId), 10)
@@ -69,5 +70,12 @@ const action = (towerId) => {
   }
   else {
     pickup(towerId)
+  }
+}
+
+const winDetection = () => {
+  if(towerL.length === 6 || towerR.length === 6){
+    document.querySelector("#protection").style.display = "flex"
+    setTimeout(() => {document.querySelector("#win-window").style.transform = "scaleX(1)"}, 50)
   }
 }

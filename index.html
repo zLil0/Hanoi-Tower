@@ -10,6 +10,12 @@
   <h1>Torre de Hanói</h1>
   <p id="move-count">Movimentos: <span id="count">0</span></p>
   <div id="game">
+    <div id="protection">
+      <div id="win-window">
+        <h2>Você Venceu!!</h2>
+        <button onclick="location.reload()">Recomeçar</button>
+      </div>
+    </div>
     <div class="tower" id="left" onclick="action('left')"></div>
     <div class="tower" id="middle" onclick="action('middle')">
       <div class="disc" id="d1"></div>
